@@ -1,12 +1,23 @@
-$body-bg:		#34495e;
-$navbar-default-bg:		#d35400;
-$navbar-default-link-color:		white;
-$navbar-default-brand-color:		#ecf0f1;
-$navbar-default-brand-hover-color:		#d35400;
-$navbar-default-brand-hover-bg:			#ecf0f1;
-$navbar-default-link-hover-bg:	#ecf0f1;
-$navbar-default-link-hover-color:	#d35400;
+@import url(http://fonts.googleapis.com/css?family=Fira+Sans:300,400,700,400italic);
+
+$body-bg:		#ecf0f1;
+$font-family-sans-serif:	'Fira Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$navbar-default-bg:		white;
+$navbar-default-link-color:		#d35400;
+$navbar-default-brand-color:		#d35400;
+$navbar-default-brand-hover-color:		#ecf0f1;
+$navbar-default-brand-hover-bg:			#d35400;
+$navbar-default-link-hover-bg:	#d35400;
+$navbar-default-link-hover-color:	#ecf0f1;
 $brand-primary:		#c0392b;
-$jumbotron-bg:		#16a085;
-$jumbotron-heading-color:	#ecf0f1;
+$jumbotron-bg:		white;
+$jumbotron-heading-color:	#34495e;
 @import 'bootstrap';
+
+.center {
+	text-align: center;
+}
+
+.navbar-brand {
+	font-weight: bold;
+}

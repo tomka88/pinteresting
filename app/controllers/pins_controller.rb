@@ -46,12 +46,19 @@ class PinsController < ApplicationController
     end
 
     def correct_user
-      @pin = current_user.pins.find(id: params[:id])
+      @pin = current_user.pins.find_by(id: params[:id])
       redirect_to pins_path, notice:"Not authorized to edit this pin" if @pin.nil?    
+    end
+
+    class ActiveRecord::Base
+      has_attached_file :image
+      # Validate content type
+      validates_attachment_content_type :image, :content_type => /\Aimage/
+      # Validate filename
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pin_params
-      params.require(:pin).permit(:description)
+      params.require(:pin).permit(:description, :image)
     end
 end

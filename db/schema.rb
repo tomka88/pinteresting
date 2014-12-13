@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141019150355) do
+ActiveRecord::Schema.define(version: 20141020214115) do
 
   create_table "pins", force: true do |t|
     t.string   "description"
